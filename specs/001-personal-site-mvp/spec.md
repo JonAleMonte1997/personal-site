@@ -4,7 +4,7 @@
 
 **Created**: 2026-06-01
 
-**Status**: Draft
+**Status**: Ready for planning
 
 **Input**: Single-page personal website acting as an interactive CV and portfolio, targeting technical recruiters and hiring managers at AI-first startups.
 
@@ -117,7 +117,7 @@ A visitor navigates to the Projects section and sees a clean placeholder indicat
 
 - **FR-001**: The site MUST present all six sections in fixed order: Hero, About, Experience, Projects, Stack, Contact.
 - **FR-002**: The site MUST be navigable via vertical scroll from a single page — no routing between separate pages.
-- **FR-003**: The Hero section MUST display name, professional title, and a tagline above the fold on both desktop and mobile.
+- **FR-003**: The Hero section MUST display name, professional title, and the tagline "I build AI systems that survive the real world" above the fold on both desktop and mobile.
 - **FR-004**: The About section MUST contain a personal statement and a statement of professional intent (what Jonathan is looking for).
 - **FR-005**: The Experience section MUST display all work entries in reverse-chronological order, each with company, role, date range, responsibility bullets, and tool tags.
 - **FR-006**: The Projects section MUST display an intentional empty state — no broken or blank appearance.
@@ -157,7 +157,7 @@ A visitor navigates to the Projects section and sees a clean placeholder indicat
 
 - The visitor has a modern browser with JavaScript enabled. Graceful degradation for JS-disabled environments is best-effort, not a hard requirement for MVP.
 - Content (personal statement, experience, stack) is finalized before production deploy. Placeholder content is acceptable only in the Projects section.
-- Three items remain to be defined before production: Hero tagline, typography, and accent color. These do not block spec or planning phases.
+- Design system is fully resolved: Geist Sans (typography), Cyan #06b6d4 (accent), "I build AI systems that survive the real world" (tagline).
 - The site is a personal project — no multi-user access, CMS, or content editing interface is needed.
 - Analytics and SEO optimization are out of scope for MVP.
 - The domain is already registered and connected to the deployment platform.

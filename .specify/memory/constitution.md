@@ -1,12 +1,10 @@
 <!-- Sync Impact Report
-Version change: 0.0.0 (template) → 1.0.0 (initial ratification)
-Added sections: Core Principles (I–V), Design System, Development Workflow, Governance
+Version change: 1.0.0 → 1.1.0
+Added: Design system tokens resolved (typography, accent color, tagline)
+Removed TODOs: TAGLINE, TYPOGRAPHY, ACCENT_COLOR — all resolved 2026-06-01
 Templates requiring updates:
   ✅ .specify/memory/constitution.md (this file)
   ⚠ .specify/templates/plan-template.md (verify on next /speckit-plan run)
-  ⚠ .specify/templates/spec-template.md (verify on next /speckit-specify run)
-  ⚠ .specify/templates/tasks-template.md (verify on next /speckit-tasks run)
-Deferred: TODO(ACCENT_COLOR), TODO(TYPOGRAPHY), TODO(TAGLINE)
 -->
 
 # personal-site Constitution
@@ -28,14 +26,14 @@ Framer Motion is the only animation library allowed — no mixing with CSS keyfr
 ### III. Design System Consistency (NON-NEGOTIABLE)
 Dark mode only — no light mode, no system-preference toggle, no `prefers-color-scheme` switching.
 All colors MUST use CSS custom properties (tokens) — no hardcoded hex values anywhere in the codebase.
-Typography: one modern sans-serif font. TODO(TYPOGRAPHY): to be defined before implementation starts.
-Accent: one color only. TODO(ACCENT_COLOR): to be defined before implementation starts.
+Typography: **Geist Sans** (Vercel). One font, one weight scale.
+Accent: **Cyan #06b6d4** — one color only. Used for highlights, links, and interactive elements.
 Tailwind CSS v4 is the only styling system — no inline styles, no CSS Modules, no styled-components.
 
 ### IV. Spec-Driven Changes
-Every new section, component, or visual change MUST start with an update to `docs/spec.md`.
+Every new section, component, or visual change MUST start with an update to the spec in `specs/`.
 No implementation without a corresponding spec entry.
-All items under "Pendiente de definir" in `docs/spec.md` MUST be resolved in spec before coding begins.
+The spec lives in `specs/001-personal-site-mvp/spec.md` — it is the single source of truth for requirements.
 
 ### V. Simplicity — No Premature Abstractions
 Three similar elements are better than a premature abstraction.
@@ -52,17 +50,17 @@ Canonical design decisions that all implementation MUST follow:
 - **Animations**: Framer Motion `whileInView` with `fadeInUp` / `fadeIn` variants. Each section animates on scroll entry. Duration MUST be ≤ 0.6s with ease-out easing.
 - **Responsive**: Mobile-first. MUST render correctly on mobile, tablet, and desktop.
 - **Language**: English only. No i18n, no language switcher.
-- **TODO(TAGLINE)**: Hero tagline — one short line — to be defined before Hero implementation.
-- **TODO(TYPOGRAPHY)**: Font family to be confirmed before any implementation begins.
-- **TODO(ACCENT_COLOR)**: Single accent color to be confirmed before any implementation begins.
+- **Tagline**: "I build AI systems that survive the real world"
+- **Typography**: Geist Sans (Vercel)
+- **Accent color**: Cyan `#06b6d4`
 
 ## Development Workflow
 
 - Changes follow: spec update → implementation → acceptance criteria verification.
-- Acceptance criteria live in `docs/spec.md` and MUST be checked off before marking a section complete.
+- Acceptance criteria live in `specs/001-personal-site-mvp/spec.md` and MUST be checked off before marking a section complete.
 - Deploy target: Vercel. Production deploys trigger on push to `main`.
 - No commits directly to `main` during active development — use feature branches.
-- Before any implementation session: read `docs/spec.md` and this constitution.
+- Before any implementation session: read the active spec and this constitution.
 
 ## Governance
 
@@ -73,6 +71,6 @@ Version semantics:
 - MINOR: new principle or section added.
 - PATCH: wording clarification or typo fix.
 
-All TODOs in this constitution MUST be resolved before the v1.0.0 production deploy.
+All design decisions are now resolved. No remaining TODOs block implementation.
 
-**Version**: 1.0.0 | **Ratified**: 2026-06-01 | **Last Amended**: 2026-06-01
+**Version**: 1.1.0 | **Ratified**: 2026-06-01 | **Last Amended**: 2026-06-01
