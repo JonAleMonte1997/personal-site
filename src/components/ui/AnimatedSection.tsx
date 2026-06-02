@@ -14,6 +14,7 @@ const variants: Variants = {
 export function AnimatedSection({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
+      data-animate
       variants={variants}
       initial="hidden"
       whileInView="visible"

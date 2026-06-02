@@ -20,7 +20,7 @@ export function Contact() {
                 {...(link.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="inline-flex items-center gap-2 rounded border border-[var(--color-accent)] px-5 py-2.5 text-sm font-mono text-[var(--color-accent)] transition-colors hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)]"
+                className="inline-flex min-h-11 items-center gap-2 rounded border border-[var(--color-accent)] px-5 py-3 text-sm font-mono text-[var(--color-accent)] transition-colors hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)]"
               >
                 {link.label}
               </a>

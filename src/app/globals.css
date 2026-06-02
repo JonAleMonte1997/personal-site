@@ -8,14 +8,37 @@
   --color-accent: #06b6d4;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Spacing rhythm tokens (FR-018) — encode the section/block scale */
+  --space-section: 6rem; /* vertical section padding (py-24) */
+  --space-block: 3rem; /* intra-section block rhythm (space-y-12) */
+  --measure: 48rem; /* max reading width (max-w-3xl), constrains ultra-wide */
 }
 
 :root {
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* offset anchor jumps below the fixed header */
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Consistent keyboard focus feedback across all interactive elements
+   (FR-020, FR-024). Reuses the single accent token — no new colors. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
