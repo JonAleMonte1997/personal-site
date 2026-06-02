@@ -29,7 +29,7 @@ Single Next.js project. App Router under `src/app/`, components under `src/compo
 **Purpose**: Establish a known-good baseline before changes.
 
 - [X] T001 Confirm baseline `npm run build` passes with zero errors on the current branch; note any existing warnings
-- [ ] T002 [P] Record current SEO/perf baseline: run a Lighthouse/SEO audit on `npm run dev` and note missing metadata (informs SC-006 before/after)
+- [X] T002 [P] Record current SEO/perf baseline: run a Lighthouse/SEO audit on `npm run dev` and note missing metadata (informs SC-006 before/after)
 - [X] T003 [P] Decide JSON-LD typing approach — add dev-only `schema-dts` OR hand-type the Person object (optional; record choice in `research.md` R3 note)
 
 ---
@@ -95,7 +95,7 @@ Single Next.js project. App Router under `src/app/`, components under `src/compo
 - [X] T017 [P] [US3] Create `src/app/sitemap.ts` → `MetadataRoute.Sitemap`: single entry `{ url: site.url, lastModified: new Date() }` (depends on T004)
 - [X] T018 [US3] Run `npm run build` and confirm static `/robots.txt`, `/sitemap.xml`, and `/opengraph-image` are emitted with no server runtime (FR-017)
 - [X] T019 [US3] Ensure avatar and OG image have explicit dimensions to prevent CLS; keep above-the-fold free of render-blocking JS (FR-015, FR-016)
-- [ ] T020 [US3] Measure deployed/preview build: confirm LCP < 2.5s and CLS < 0.1 on a throttled mobile profile (SC-004)
+- [X] T020 [US3] Measure deployed/preview build: confirm LCP < 2.5s and CLS < 0.1 on a throttled mobile profile (SC-004)
 
 **Checkpoint**: US3 verifiable — robots/sitemap served statically, CWV thresholds met.
 
@@ -127,9 +127,9 @@ Single Next.js project. App Router under `src/app/`, components under `src/compo
 - [X] T027 [P] Verify text/interactive contrast on the dark background meets legibility expectations (FR-025)
 - [X] T028 [US2] Keyboard-only pass: every interactive element reachable with visible focus, no traps (FR-024, SC-005)
 - [X] T029 [P] Remove unused default scaffolding assets from `public/` (`next.svg`, `vercel.svg`, `file.svg`, `globe.svg`, `window.svg`) and the duplicate `public/images/jonathan.JPG` if unreferenced
-- [ ] T030 Run full `npm run build` — zero errors (SC-008); run an SEO/Lighthouse audit confirming no missing critical metadata (SC-006)
-- [ ] T031 Run quickstart.md verification checklist end-to-end: social-card debuggers (SC-001), search snippet preview (SC-002), breakpoint pass 320→1440 (SC-003)
-- [ ] T032 Configure Vercel apex→www redirect (`jmontenegro.dev` → `www.jmontenegro.dev`) so canonical is unambiguous, then push to `main` to deploy
+- [X] T030 Run full `npm run build` — zero errors (SC-008); run an SEO/Lighthouse audit confirming no missing critical metadata (SC-006)
+- [X] T031 Run quickstart.md verification checklist end-to-end: social-card debuggers (SC-001), search snippet preview (SC-002), breakpoint pass 320→1440 (SC-003)
+- [X] T032 Configure Vercel apex→www redirect (`jmontenegro.dev` → `www.jmontenegro.dev`) so canonical is unambiguous, then push to `main` to deploy
 
 ---
 
