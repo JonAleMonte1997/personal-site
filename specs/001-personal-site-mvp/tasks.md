@@ -198,7 +198,8 @@
 - [x] T055 Create `src/app/icon.svg` — "jm" monogram in cyan on dark, remove default `favicon.ico`
 - [x] T056 Run `/speckit-analyze` — cross-artifact consistency check (spec ↔ plan ↔ tasks ↔ constitution); remediated C1 (Geist Mono token, constitution v1.3.0), C2 (FR-015/FR-016), I1 (plan to 7 sections), I2 (entity list)
 - [x] T057 Final `npm run build` (zero errors) — content aligned to CV (B2 English, tools reordered by priority, education "Graduated")
-- [ ] T058 Create GitHub remote, connect Vercel, push to `main` → verify production deploy
+- [x] T058a Push to GitHub `main` (origin: JonAleMonte1997/personal-site)
+- [x] T058b Deploy on Vercel + custom domain → live at https://www.jmontenegro.dev (apex redirects, SSL active)
 
 ---
 

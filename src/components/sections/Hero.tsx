@@ -13,7 +13,7 @@ export function Hero() {
             <div className="shrink-0 rounded-full ring-2 ring-[var(--color-accent)] ring-offset-4 ring-offset-[var(--color-bg)]">
               <Image
                 src="/images/jonathan-avatar.jpg"
-                alt="Jonathan Montenegro"
+                alt="Portrait of Jonathan Montenegro"
                 width={140}
                 height={140}
                 priority
@@ -24,7 +24,7 @@ export function Hero() {
               <p className="mb-3 font-mono text-sm text-[var(--color-accent)]">
                 Hi, my name is
               </p>
-              <h1 className="mb-4 text-5xl font-bold tracking-tight text-[var(--color-text)] sm:text-6xl">
+              <h1 className="mb-4 text-4xl font-bold tracking-tight text-[var(--color-text)] sm:text-5xl md:text-6xl">
                 Jonathan Montenegro
               </h1>
               <p className="mb-6 text-2xl font-semibold text-[var(--color-muted)] sm:text-3xl">
