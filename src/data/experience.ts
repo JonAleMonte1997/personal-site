@@ -1,0 +1,56 @@
+import type { ExperienceEntry } from "./types";
+
+export const experience: ExperienceEntry[] = [
+  {
+    company: "Interbanking",
+    role: "AI Engineer",
+    startDate: "2025-07",
+    endDate: null,
+    bullets: [
+      "Built and deployed a LangGraph agent that reviews internal technical documentation and answers developer questions.",
+      "Designed MCP servers connecting MongoDB and the internal technical wiki to Kiro, so devs can query the database, fetch Jira tasks, read docs, and retrieve development criteria directly from the IDE.",
+      "Built RAG pipelines over internal development documents to power context-aware responses in AI tools.",
+      "Automated internal notification and alert workflows with n8n.",
+    ],
+    tools: [
+      "TypeScript",
+      "Python",
+      "Next.js",
+      "React",
+      "FastAPI",
+      "LangChain",
+      "LangGraph",
+      "n8n",
+    ],
+  },
+  {
+    company: "Interbanking",
+    role: "Full Stack Developer",
+    startDate: "2020-09",
+    endDate: "2025-06",
+    bullets: [
+      "Designed and built MCP servers connecting production databases to AI tools (Amazon Q, Kiro).",
+      "Drove AI tooling adoption across engineering chapters.",
+      "Built REST APIs with Python and FastAPI for cross-area internal tooling.",
+      "Designed and implemented event-driven microservices with Kafka and the Outbox pattern.",
+      "Developed microfrontends with React and TypeScript integrated via module federation.",
+      "Developed BFF services in NestJS with OAuth integration.",
+      "Broke up legacy Struts systems into modern microservices.",
+      "Tested REST APIs with pytest and Postman.",
+      "Coordinated cross-functional syncs with PO, BA, UI/UX, DBA and DevOps.",
+    ],
+    tools: [
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "React",
+      "NestJS",
+      "Kafka",
+      "pytest",
+      "Amazon Q",
+      "Kiro",
+      "MCP",
+      "Postman",
+    ],
+  },
+];

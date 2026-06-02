@@ -1,10 +1,14 @@
 <!-- Sync Impact Report
-Version change: 1.0.0 → 1.1.0
-Added: Design system tokens resolved (typography, accent color, tagline)
-Removed TODOs: TAGLINE, TYPOGRAPHY, ACCENT_COLOR — all resolved 2026-06-01
+Version change: 1.2.0 → 1.3.0
+Added: Geist Mono as a second official typeface (system: Geist Sans + Geist Mono)
+Changed: Principle III typography rule now allows the two-font Geist system
 Templates requiring updates:
   ✅ .specify/memory/constitution.md (this file)
-  ⚠ .specify/templates/plan-template.md (verify on next /speckit-plan run)
+  ✅ src/app/layout.tsx + globals.css (--font-mono token)
+
+Previous: 1.1.0 → 1.2.0
+Added: Education & Languages section (section count 6 → 7)
+Changed: Stack section no longer requires proficiency levels (removed from spec FR-007)
 -->
 
 # personal-site Constitution
@@ -26,7 +30,7 @@ Framer Motion is the only animation library allowed — no mixing with CSS keyfr
 ### III. Design System Consistency (NON-NEGOTIABLE)
 Dark mode only — no light mode, no system-preference toggle, no `prefers-color-scheme` switching.
 All colors MUST use CSS custom properties (tokens) — no hardcoded hex values anywhere in the codebase.
-Typography: **Geist Sans** (Vercel). One font, one weight scale.
+Typography: the **Geist** type system (Vercel) — **Geist Sans** for body and headings, **Geist Mono** for technical labels, dates, and section eyebrows. No other typefaces.
 Accent: **Cyan #06b6d4** — one color only. Used for highlights, links, and interactive elements.
 Tailwind CSS v4 is the only styling system — no inline styles, no CSS Modules, no styled-components.
 
@@ -45,13 +49,13 @@ No backend, no CMS, no database. All content lives in TypeScript constants or da
 
 Canonical design decisions that all implementation MUST follow:
 
-- **Layout**: Single page, vertical scroll. Six sections in fixed order: Hero → About → Experience → Projects → Stack → Contact.
+- **Layout**: Single page, vertical scroll. Seven sections in fixed order: Hero → About → Experience → Projects → Stack → Education & Languages → Contact.
 - **Container**: Full-width sections with a centered max-width container.
 - **Animations**: Framer Motion `whileInView` with `fadeInUp` / `fadeIn` variants. Each section animates on scroll entry. Duration MUST be ≤ 0.6s with ease-out easing.
 - **Responsive**: Mobile-first. MUST render correctly on mobile, tablet, and desktop.
 - **Language**: English only. No i18n, no language switcher.
 - **Tagline**: "I build AI systems that survive the real world"
-- **Typography**: Geist Sans (Vercel)
+- **Typography**: Geist Sans + Geist Mono (Vercel)
 - **Accent color**: Cyan `#06b6d4`
 
 ## Development Workflow
@@ -73,4 +77,4 @@ Version semantics:
 
 All design decisions are now resolved. No remaining TODOs block implementation.
 
-**Version**: 1.1.0 | **Ratified**: 2026-06-01 | **Last Amended**: 2026-06-01
+**Version**: 1.3.0 | **Ratified**: 2026-06-01 | **Last Amended**: 2026-06-02

@@ -63,12 +63,26 @@ A technical recruiter scans the Stack section to quickly assess whether Jonathan
 
 **Why this priority**: Stack is a fast filter for technical fit. Recruiters often scan it before reading experience in detail.
 
-**Independent Test**: Can be tested independently by rendering only the Stack section and verifying technologies are grouped by category and each has a proficiency level.
+**Independent Test**: Can be tested independently by rendering only the Stack section and verifying technologies are grouped by category.
 
 **Acceptance Scenarios**:
 
 1. **Given** a visitor scrolls to the Stack section, **When** it loads, **Then** technologies are visible grouped into categories (AI/ML, Backend, Frontend, Infra).
-2. **Given** a visitor scans the section, **When** reading each item, **Then** a proficiency level is shown alongside each technology.
+
+---
+
+### User Story 7 — Education & Languages (Priority: P7)
+
+A recruiter wants to confirm Jonathan's formal education and language proficiency, presented compactly in a single section.
+
+**Why this priority**: Supporting credentials. Useful for filtering but secondary to experience and stack.
+
+**Independent Test**: Can be tested independently by rendering only the Education & Languages section and verifying the education entry (institution, degree, years) and both languages (name + level) are present.
+
+**Acceptance Scenarios**:
+
+1. **Given** a visitor scrolls to the Education & Languages section, **When** it loads, **Then** the education entry shows institution, degree, and year range.
+2. **Given** a visitor reads the section, **When** scanning languages, **Then** each language shows its name and proficiency level.
 
 ---
 
@@ -115,26 +129,31 @@ A visitor navigates to the Projects section and sees a clean placeholder indicat
 
 ### Functional Requirements
 
-- **FR-001**: The site MUST present all six sections in fixed order: Hero, About, Experience, Projects, Stack, Contact.
+- **FR-001**: The site MUST present all seven sections in fixed order: Hero, About, Experience, Projects, Stack, Education & Languages, Contact.
 - **FR-002**: The site MUST be navigable via vertical scroll from a single page — no routing between separate pages.
 - **FR-003**: The Hero section MUST display name, professional title, and the tagline "I build AI systems that survive the real world" above the fold on both desktop and mobile.
 - **FR-004**: The About section MUST contain a personal statement and a statement of professional intent (what Jonathan is looking for).
 - **FR-005**: The Experience section MUST display all work entries in reverse-chronological order, each with company, role, date range, responsibility bullets, and tool tags.
 - **FR-006**: The Projects section MUST display an intentional empty state — no broken or blank appearance.
-- **FR-007**: The Stack section MUST group technologies by category and show a proficiency level for each entry.
+- **FR-007**: The Stack section MUST group technologies by category (AI/ML, Backend, Frontend, Infra).
 - **FR-008**: The Contact section MUST provide working links for email, LinkedIn, and GitHub. The email link MUST open a mail client. External links MUST open in a new tab.
 - **FR-009**: Every section MUST animate into view when entering the viewport during scroll. Animations MUST be subtle and MUST NOT delay content readability.
 - **FR-010**: The site MUST be fully responsive and usable on screens ≥ 320px wide (mobile, tablet, desktop).
 - **FR-011**: The site MUST render in dark mode only. No light mode is provided.
 - **FR-012**: All visible content MUST be in English.
 - **FR-013**: The site MUST be deployable as a static build with no server-side runtime dependency in production.
+- **FR-014**: The Education & Languages section MUST display formal education (institution, degree, year range) and spoken languages (name, level).
+- **FR-015**: The Hero section MUST display a profile photo as a circular avatar, optimized and served as a static image with no layout shift on load.
+- **FR-016**: The site MUST provide a favicon reflecting the site's branding (monogram in the accent color).
 
 ### Key Entities
 
 - **Visitor**: Any person arriving at the site — primarily technical recruiters and hiring managers at AI-first startups.
-- **Section**: A discrete content block within the single page (Hero, About, Experience, Projects, Stack, Contact). Each is independently scrollable and independently testable.
+- **Section**: A discrete content block within the single page (Hero, About, Experience, Projects, Stack, Education & Languages, Contact). Each is independently scrollable and independently testable.
 - **Experience Entry**: A single job record with company, role, date range, bullet points, and a list of tools used.
-- **Stack Entry**: A single technology with name, category (AI/ML, Backend, Frontend, Infra), and proficiency level.
+- **Stack Entry**: A single technology with name and category (AI/ML, Backend, Frontend, Infra).
+- **Education Entry**: A formal credential with institution, degree, and year range.
+- **Language**: A spoken language with name and level (e.g. Native, Professional).
 - **Contact Link**: A clickable item pointing to an external channel (email, LinkedIn, GitHub).
 
 ---
@@ -144,7 +163,7 @@ A visitor navigates to the Projects section and sees a clean placeholder indicat
 ### Measurable Outcomes
 
 - **SC-001**: A first-time visitor can identify Jonathan's name, title, and primary positioning within 5 seconds of the page loading.
-- **SC-002**: All six sections are reachable by scrolling from top to bottom without page navigation or additional interaction.
+- **SC-002**: All seven sections are reachable by scrolling from top to bottom without page navigation or additional interaction.
 - **SC-003**: All contact links open their intended destination on the first tap or click, on both desktop and mobile.
 - **SC-004**: The site renders without horizontal overflow on screens as narrow as 320px.
 - **SC-005**: Every section entrance animation completes within 0.6 seconds and does not block reading the section content.
