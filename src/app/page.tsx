@@ -1,19 +1,22 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Experience } from "@/components/sections/Experience";
-import { Projects } from "@/components/sections/Projects";
-import { Stack } from "@/components/sections/Stack";
-import { EducationLanguages } from "@/components/sections/EducationLanguages";
-import { Contact } from "@/components/sections/Contact";
+import { Historia } from "@/components/sections/Historia";
+import { Seguime } from "@/components/sections/Seguime";
+import { Proyectos } from "@/components/sections/Proyectos";
+import { Contacto } from "@/components/sections/Contacto";
 import { site } from "@/data/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: site.name,
-  jobTitle: site.jobTitle,
+  description: site.description,
   url: site.url,
-  sameAs: [site.profiles.linkedin, site.profiles.github],
+  sameAs: [site.profiles.instagram, site.profiles.github],
 };
 
 export default function Home() {
@@ -26,12 +29,10 @@ export default function Home() {
         }}
       />
       <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Stack />
-      <EducationLanguages />
-      <Contact />
+      <Historia />
+      <Seguime />
+      <Proyectos />
+      <Contacto />
     </main>
   );
 }

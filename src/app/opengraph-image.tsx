@@ -1,11 +1,11 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/data/site";
 
-// Branded 1200×630 social preview, generated at build time (no runtime).
-// Dark theme + cyan accent, consistent with the site design system.
+// Preview social 1200×630 con la marca, generado en build (sin runtime).
+// Tema oscuro + acento cian, consistente con el design system del sitio.
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = `${site.name} — ${site.jobTitle}`;
+export const alt = site.title;
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -34,7 +34,7 @@ export default function OpengraphImage() {
         </div>
         <div
           style={{
-            fontSize: 92,
+            fontSize: 84,
             fontWeight: 700,
             lineHeight: 1.05,
             marginTop: 28,
@@ -42,18 +42,18 @@ export default function OpengraphImage() {
         >
           {site.name}
         </div>
-        <div style={{ fontSize: 46, color: "#8b949e", marginTop: 16 }}>
-          {site.jobTitle}
-        </div>
         <div
           style={{
-            fontSize: 32,
+            fontSize: 40,
             color: "#8b949e",
-            marginTop: 44,
-            maxWidth: 940,
+            marginTop: 24,
+            maxWidth: 980,
           }}
         >
-          I build AI systems that survive the real world.
+          {site.tagline}
+        </div>
+        <div style={{ fontSize: 30, color: "#8b949e", marginTop: 20 }}>
+          Chivilcoy → Bariloche · agosto 2026
         </div>
         <div
           style={{

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { site } from "@/data/site";
 
 export function Hero() {
   return (
@@ -13,7 +14,7 @@ export function Hero() {
             <div className="shrink-0 rounded-full ring-2 ring-[var(--color-accent)] ring-offset-4 ring-offset-[var(--color-bg)]">
               <Image
                 src="/images/jonathan-avatar.jpg"
-                alt="Portrait of Jonathan Montenegro"
+                alt="Retrato de Jonathan Montenegro"
                 width={140}
                 height={140}
                 priority
@@ -22,19 +23,19 @@ export function Hero() {
             </div>
             <div>
               <p className="mb-3 font-mono text-sm text-[var(--color-accent)]">
-                Hi, my name is
+                Soy Jonathan Montenegro
               </p>
-              <h1 className="mb-4 text-4xl font-bold tracking-tight text-[var(--color-text)] sm:text-5xl md:text-6xl">
-                Jonathan Montenegro
+              <h1 className="mb-4 text-4xl font-bold tracking-tight text-[var(--color-text)] sm:text-5xl">
+                {site.tagline}
               </h1>
-              <p className="mb-6 text-2xl font-semibold text-[var(--color-muted)] sm:text-3xl">
-                AI Engineer · Fullstack
-              </p>
-              <p className="mb-4 max-w-xl text-lg text-[var(--color-muted)]">
-                I build AI systems that survive the real world.
+              <p className="mb-6 max-w-xl text-lg text-[var(--color-muted)]">
+                Dejo mi trabajo, mi departamento y mi ciudad, y me mudo solo a
+                Bariloche con una mochila y una computadora. Esto no es una
+                fórmula ni un curso: es mi proceso real, documentado mientras
+                pasa.
               </p>
               <p className="font-mono text-sm text-[var(--color-muted)]">
-                Buenos Aires, Argentina
+                Chivilcoy → Bariloche · agosto 2026
               </p>
             </div>
           </div>

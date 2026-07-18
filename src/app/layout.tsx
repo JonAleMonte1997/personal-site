@@ -21,9 +21,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: site.title,
+  title: {
+    default: site.title,
+    template: `%s — ${site.name}`,
+  },
   description: site.description,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: site.url,
@@ -46,20 +48,20 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
       <body className="min-h-full antialiased">
-          {/* Without JS, Framer Motion's whileInView never fires, leaving the
-              SSR-rendered hidden state (opacity:0) visible. Force animated
-              blocks visible so content degrades gracefully. */}
-          <noscript>
-            <style>{`[data-animate]{opacity:1!important;transform:none!important}`}</style>
-          </noscript>
-          <Header />
-          <div className="pt-16">{children}</div>
-          <Footer />
-        </body>
+        {/* Without JS, Framer Motion's whileInView never fires, leaving the
+            SSR-rendered hidden state (opacity:0) visible. Force animated
+            blocks visible so content degrades gracefully. */}
+        <noscript>
+          <style>{`[data-animate]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+        <Header />
+        <div className="pt-16">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,17 +1,23 @@
-// Single source of truth for SEO/metadata. Consumed by layout.tsx (metadata),
-// page.tsx (JSON-LD), sitemap.ts, robots.ts, and opengraph-image.tsx.
-// Production domain: www host is canonical, no trailing slash.
+// Única fuente de verdad para SEO/metadata y links públicos. La consumen
+// layout.tsx (metadata), page.tsx (JSON-LD), sitemap.ts, robots.ts y
+// opengraph-image.tsx.
+// Dominio de producción: el host www es el canónico, sin trailing slash.
 
 export const site = {
   url: "https://www.jmontenegro.dev",
   name: "Jonathan Montenegro",
-  title: "Jonathan Montenegro — AI Engineer",
+  title: "Jonathan Montenegro — Reinvención y fe",
   description:
-    "AI Engineer building autonomous agents, LLM-powered systems, and RAG pipelines in production. I build AI systems that survive the real world.",
-  jobTitle: "AI Engineer",
-  locale: "en_US",
+    "Le entrego todo a Dios y empiezo de nuevo: dejo mi trabajo, mi departamento y mi ciudad, y me mudo solo a Bariloche con una mochila y una computadora. Documento todo el proceso.",
+  tagline: "Le entrego todo a Dios y empiezo de nuevo.",
+  locale: "es_AR",
   profiles: {
-    linkedin: "https://linkedin.com/in/jonathan-alexis-montenegro",
+    // Handle heredado de la etapa anterior; si la marca cambia de handle,
+    // actualizar solo acá.
+    instagram: "https://www.instagram.com/jmontenegro.dev",
+    // Canal de YouTube todavía sin crear — completar cuando exista y la
+    // sección "Seguime" lo va a mostrar automáticamente.
+    youtube: null as string | null,
     github: "https://github.com/JonAleMonte1997",
     email: "jona.ch.dev@gmail.com",
   },
