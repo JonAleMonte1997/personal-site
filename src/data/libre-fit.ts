@@ -1,12 +1,12 @@
 // Estado público del proyecto LibreFit. Actualizar este archivo (no los
 // componentes) cuando avance el proyecto: cambiar `estado`, mover ítems entre
 // `hecho` y `enCamino`, y agregar entradas al principio de `bitacora`.
+// El repo de la app es privado: no linkear a GitHub desde el sitio.
 
 export const libreFit = {
   nombre: "LibreFit",
   resumen:
-    "App de fitness para Android y iOS: calculás tus macros a partir de tus datos corporales y seguís tu día desde un dashboard simple. Sin cuentas, sin suscripciones y sin recolección de datos.",
-  repo: "https://github.com/JonAleMonte1997/libre-fit",
+    "App de fitness para Android y iOS: calculás tus macros a partir de tus datos corporales y los tenés siempre a mano. Sin cuentas, sin suscripciones y sin recolección de datos.",
   estado: "En desarrollo — todavía no está publicada en las tiendas.",
   principios: [
     {
@@ -15,32 +15,31 @@ export const libreFit = {
         "Todo se guarda únicamente en tu dispositivo. No hay servidores, ni cuentas, ni analytics.",
     },
     {
-      titulo: "Código abierto",
+      titulo: "Gratis de verdad",
       detalle:
-        "El código es público en GitHub: cualquiera puede leerlo, auditarlo o proponer mejoras.",
+        "Sin suscripciones, sin publicidad y sin compras dentro de la app.",
     },
     {
       titulo: "Simple a propósito",
       detalle:
-        "Hace pocas cosas y las hace bien: perfil, macros y seguimiento diario. Nada de funciones infladas.",
+        "Hace pocas cosas y las hace bien: tu perfil y tus macros. Nada de funciones infladas.",
     },
   ],
   hecho: [
     "Onboarding con datos corporales (peso, altura, edad, sexo)",
     "Cálculo de macros con objetivo (mantenimiento, déficit o superávit)",
     "Edición manual de macros para quien ya sabe sus números",
-    "Dashboard diario de macros",
+    "Dashboard con tus macros siempre a mano",
     "Perfil editable con recálculo automático",
   ],
   enCamino: [
-    "Registro de comidas del día",
-    "Historial y progreso en el tiempo",
+    "Planificación de comidas",
     "Publicación en Google Play y App Store",
   ],
   bitacora: [
     {
       fecha: "Julio 2026",
-      nota: "El núcleo de la app está funcionando: onboarding, cálculo de macros, dashboard y perfil. El foco ahora es el registro de comidas.",
+      nota: "El núcleo de la app está funcionando: onboarding, cálculo de macros, dashboard y perfil. Lo próximo grande es la planificación de comidas.",
     },
   ],
 } as const;

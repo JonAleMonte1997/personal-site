@@ -27,7 +27,9 @@ El contexto de la marca (historia, voz, pilares) vive en `~/Desktop/personal-bra
 ## Convenciones
 
 - Todo el contenido visible es en español (voseo argentino, directo, sin relleno). Código, identificadores y commits en inglés.
-- Colores solo vía los tokens de `globals.css` (`--color-bg`, `--color-surface`, `--color-text`, `--color-muted`, `--color-accent`) — no introducir hex nuevos ni más acentos.
+- Colores solo vía los tokens semánticos de `globals.css` (`bg-bg`, `bg-surface`, `bg-surface-selected`, `text-content`, `text-content-secondary`, `border-border`, `bg-brand`/`text-on-brand`, `bg-brand-pressed`) — espejo del design system de LibreFit (`~/Desktop/libre-fit/docs/design-system.md`). No introducir hex nuevos ni clases de paleta cruda.
+- Formas LibreFit: cards `rounded-xl bg-surface p-4` (sin borde), botones `rounded-xl` (`bg-brand text-on-brand font-semibold` el primario, `border border-border bg-surface` el secundario), pills `rounded-full`.
+- El repo de LibreFit es privado: no linkearlo ni afirmar en el sitio que el código es abierto/público.
 - Contenido nuevo va en `src/data/` como datos tipados; los componentes solo renderizan.
 - Animaciones de aparición: envolver en `AnimatedSection` (ya maneja `prefers-reduced-motion` implícito vía Framer y el fallback `<noscript>`).
 

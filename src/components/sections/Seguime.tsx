@@ -11,17 +11,17 @@ export function Seguime() {
             label="Seguime"
             title="El proceso, documentado completo"
           />
-          <p className="mb-10 text-[var(--color-muted)]">
+          <p className="mb-10 text-content-secondary">
             Sin guiones, sin edición y sin filtros: grabo con el celular y lo
             que sale, queda. Los errores en vivo también son parte de la
             historia.
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
-            <div className="rounded border border-[var(--color-surface)] bg-[var(--color-surface)]/50 p-6">
-              <h3 className="mb-2 font-semibold text-[var(--color-text)]">
+            <div className="rounded-xl bg-surface p-4">
+              <h3 className="mb-2 font-semibold text-content">
                 YouTube
               </h3>
-              <p className="mb-4 text-sm text-[var(--color-muted)]">
+              <p className="mb-4 text-sm text-content-secondary">
                 Tres videos por semana contando el proceso a fondo: lo que
                 decido, lo que me cuesta y lo que va pasando en el camino a
                 Bariloche.
@@ -31,21 +31,21 @@ export function Seguime() {
                   href={site.profiles.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-sm text-[var(--color-accent)] hover:opacity-80"
+                  className="font-mono text-sm text-brand hover:opacity-80"
                 >
                   Ir al canal →
                 </a>
               ) : (
-                <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-muted)]">
+                <p className="font-mono text-xs uppercase tracking-widest text-content-secondary">
                   El canal arranca muy pronto
                 </p>
               )}
             </div>
-            <div className="rounded border border-[var(--color-surface)] bg-[var(--color-surface)]/50 p-6">
-              <h3 className="mb-2 font-semibold text-[var(--color-text)]">
+            <div className="rounded-xl bg-surface p-4">
+              <h3 className="mb-2 font-semibold text-content">
                 Instagram
               </h3>
-              <p className="mb-4 text-sm text-[var(--color-muted)]">
+              <p className="mb-4 text-sm text-content-secondary">
                 El día a día en stories y un post diario: la parte chica y
                 real del proceso, mientras está pasando.
               </p>
@@ -53,7 +53,7 @@ export function Seguime() {
                 href={site.profiles.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-sm text-[var(--color-accent)] hover:opacity-80"
+                className="font-mono text-sm text-brand hover:opacity-80"
               >
                 @jmontenegro.dev →
               </a>

@@ -18,15 +18,15 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#0d1117",
-          color: "#e6edf3",
+          backgroundColor: "#000000",
+          color: "#f9fafb",
           fontFamily: "sans-serif",
         }}
       >
         <div
           style={{
             fontSize: 28,
-            color: "#06b6d4",
+            color: "#22c55e",
             letterSpacing: "0.1em",
           }}
         >
@@ -45,14 +45,14 @@ export default function OpengraphImage() {
         <div
           style={{
             fontSize: 40,
-            color: "#8b949e",
+            color: "#9ca3af",
             marginTop: 24,
             maxWidth: 980,
           }}
         >
           {site.tagline}
         </div>
-        <div style={{ fontSize: 30, color: "#8b949e", marginTop: 20 }}>
+        <div style={{ fontSize: 30, color: "#9ca3af", marginTop: 20 }}>
           Chivilcoy → Bariloche · agosto 2026
         </div>
         <div
@@ -60,7 +60,7 @@ export default function OpengraphImage() {
             marginTop: 52,
             height: 8,
             width: 140,
-            backgroundColor: "#06b6d4",
+            backgroundColor: "#22c55e",
           }}
         />
       </div>

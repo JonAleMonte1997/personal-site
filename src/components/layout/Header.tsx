@@ -11,11 +11,11 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-surface)] bg-[var(--color-bg)]/90 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-bg/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 md:px-12 lg:px-24">
         <Link
           href="/"
-          className="font-mono text-sm text-[var(--color-accent)] hover:opacity-80 transition-opacity"
+          className="font-mono text-sm text-brand hover:opacity-80 transition-opacity"
         >
           jm.
         </Link>
@@ -24,7 +24,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-mono text-xs text-[var(--color-muted)] transition-colors hover:text-[var(--color-text)]"
+              className="font-mono text-xs text-content-secondary transition-colors hover:text-content"
             >
               {link.label}
             </Link>

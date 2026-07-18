@@ -17,19 +17,19 @@ export default function PrivacidadPage() {
   return (
     <main className="px-6 py-24 md:px-12 lg:px-24">
       <div className="mx-auto w-full max-w-3xl">
-        <p className="mb-3 font-mono text-sm text-[var(--color-accent)]">
+        <p className="mb-3 font-mono text-sm text-brand">
           LibreFit
         </p>
-        <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--color-text)] sm:text-4xl">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-content sm:text-4xl">
           Política de privacidad
         </h1>
-        <p className="mb-12 font-mono text-xs text-[var(--color-muted)]">
+        <p className="mb-12 font-mono text-xs text-content-secondary">
           Última actualización: {ULTIMA_ACTUALIZACION}
         </p>
 
-        <div className="space-y-10 text-[var(--color-muted)]">
+        <div className="space-y-10 text-content-secondary">
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Lo esencial
             </h2>
             <p>
@@ -40,7 +40,7 @@ export default function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Qué datos maneja la app
             </h2>
             <p className="mb-3">
@@ -57,7 +57,7 @@ export default function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Qué no hacemos
             </h2>
             <ul className="list-disc space-y-2 pl-6">
@@ -73,7 +73,7 @@ export default function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Cómo borrar tus datos
             </h2>
             <p>
@@ -86,7 +86,7 @@ export default function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Menores de edad
             </h2>
             <p>
@@ -97,36 +97,26 @@ export default function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Cambios a esta política
             </h2>
             <p>
               Si en el futuro la app incorpora funciones que cambien este
               esquema (por ejemplo, sincronización opcional), esta política se
               actualizará antes de publicar esos cambios y la fecha de arriba
-              lo va a reflejar. El código de la app es abierto, así que
-              cualquiera puede verificar lo que acá se afirma en{" "}
-              <a
-                href="https://github.com/JonAleMonte1997/libre-fit"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--color-accent)] hover:opacity-80"
-              >
-                github.com/JonAleMonte1997/libre-fit
-              </a>
-              .
+              lo va a reflejar.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-semibold text-[var(--color-text)]">
+            <h2 className="mb-3 text-xl font-semibold text-content">
               Contacto
             </h2>
             <p>
               Ante cualquier duda sobre esta política, escribime a{" "}
               <a
                 href={`mailto:${site.profiles.email}`}
-                className="text-[var(--color-accent)] hover:opacity-80"
+                className="text-brand hover:opacity-80"
               >
                 {site.profiles.email}
               </a>

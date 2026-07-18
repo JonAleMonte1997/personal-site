@@ -8,8 +8,8 @@ export const site = {
   name: "Jonathan Montenegro",
   title: "Jonathan Montenegro — Reinvención y fe",
   description:
-    "Le entrego todo a Dios y empiezo de nuevo: dejo mi trabajo, mi departamento y mi ciudad, y me mudo solo a Bariloche con una mochila y una computadora. Documento todo el proceso.",
-  tagline: "Le entrego todo a Dios y empiezo de nuevo.",
+    "Pago con mi vida actual una vida nueva: dejo mi trabajo, mi departamento y mi ciudad, y me mudo solo a Bariloche con una mochila y una computadora. Documento todo el proceso.",
+  tagline: "Pago con mi vida actual una vida nueva",
   locale: "es_AR",
   profiles: {
     // Handle heredado de la etapa anterior; si la marca cambia de handle,

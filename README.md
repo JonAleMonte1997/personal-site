@@ -2,7 +2,7 @@
 
 Sitio personal de Jonathan Montenegro — [www.jmontenegro.dev](https://www.jmontenegro.dev).
 
-Cuenta la historia de mi marca personal (reinvención y fe: dejo todo y me mudo a Bariloche en agosto de 2026) y aloja las páginas públicas de [LibreFit](https://github.com/JonAleMonte1997/libre-fit):
+Cuenta la historia de mi marca personal (dejo todo y me mudo a Bariloche en agosto de 2026) y aloja las páginas públicas de LibreFit:
 
 - `/` — la historia, dónde seguirla (YouTube/Instagram) y contacto.
 - `/libre-fit` — seguimiento público del desarrollo de la app.

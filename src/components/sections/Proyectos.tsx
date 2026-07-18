@@ -12,23 +12,23 @@ export function Proyectos() {
             label="Proyectos"
             title="Lo que construyo en el camino"
           />
-          <p className="mb-10 text-[var(--color-muted)]">
+          <p className="mb-10 text-content-secondary">
             Empezar de nuevo no es solo mudarme: también es elegir en qué
-            trabajo. Esto es lo que estoy construyendo, en público.
+            trabajo. Esto es lo que estoy construyendo en el camino.
           </p>
           <Link
             href="/libre-fit"
-            className="block rounded border border-[var(--color-surface)] bg-[var(--color-surface)]/50 p-6 transition-colors hover:border-[var(--color-accent)]"
+            className="block rounded-xl bg-surface p-4 transition-colors hover:bg-surface-selected"
           >
             <div className="mb-2 flex items-center justify-between gap-4">
-              <h3 className="font-semibold text-[var(--color-text)]">
+              <h3 className="font-semibold text-content">
                 {libreFit.nombre}
               </h3>
-              <span className="font-mono text-xs text-[var(--color-accent)]">
+              <span className="font-mono text-xs text-brand">
                 seguimiento →
               </span>
             </div>
-            <p className="text-sm text-[var(--color-muted)]">
+            <p className="text-sm text-content-secondary">
               {libreFit.resumen}
             </p>
           </Link>

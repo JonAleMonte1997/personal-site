@@ -3,9 +3,24 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/data/site";
 
 const canales = [
-  { label: "Email", href: `mailto:${site.profiles.email}`, external: false },
-  { label: "Instagram", href: site.profiles.instagram, external: true },
-  { label: "GitHub", href: site.profiles.github, external: true },
+  {
+    label: "Email",
+    href: `mailto:${site.profiles.email}`,
+    external: false,
+    primario: true,
+  },
+  {
+    label: "Instagram",
+    href: site.profiles.instagram,
+    external: true,
+    primario: false,
+  },
+  {
+    label: "GitHub",
+    href: site.profiles.github,
+    external: true,
+    primario: false,
+  },
 ];
 
 export function Contacto() {
@@ -14,7 +29,7 @@ export function Contacto() {
       <div className="mx-auto w-full max-w-3xl">
         <AnimatedSection>
           <SectionHeading label="Contacto" title="Escribime" />
-          <p className="mb-8 text-[var(--color-muted)]">
+          <p className="mb-8 text-content-secondary">
             Si mi historia te tocó, estás en un proceso parecido o querés
             decirme algo sobre LibreFit, me podés escribir por cualquiera de
             estos canales. Leo todo.
@@ -27,7 +42,11 @@ export function Contacto() {
                 {...(canal.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="inline-flex min-h-11 items-center gap-2 rounded border border-[var(--color-accent)] px-5 py-3 text-sm font-mono text-[var(--color-accent)] transition-colors hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)]"
+                className={
+                  canal.primario
+                    ? "inline-flex min-h-11 items-center rounded-xl bg-brand px-6 py-3 text-base font-semibold text-on-brand transition-colors hover:bg-brand-pressed"
+                    : "inline-flex min-h-11 items-center rounded-xl border border-border bg-surface px-6 py-3 text-base font-semibold text-content transition-colors hover:bg-surface-selected"
+                }
               >
                 {canal.label}
               </a>

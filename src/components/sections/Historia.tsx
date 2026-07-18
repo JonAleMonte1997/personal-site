@@ -28,7 +28,7 @@ export function Historia() {
       <div className="mx-auto w-full max-w-3xl">
         <AnimatedSection>
           <SectionHeading label="La historia" title="Por qué dejo todo" />
-          <div className="space-y-4 text-[var(--color-muted)]">
+          <div className="space-y-4 text-content-secondary">
             <p>
               Durante años construí una vida que se veía bien de afuera:
               trabajo estable, departamento propio, rutina conocida. Pero
@@ -36,8 +36,8 @@ export function Historia() {
               más de lo que me daba.
             </p>
             <p>
-              Le entrego todo a Dios y empiezo de nuevo. No como frase
-              inspiradora: como decisión concreta, con fecha y con costos
+              Pago con mi vida actual una vida nueva. No es una frase
+              inspiradora: es una decisión concreta, con fecha y con costos
               reales. Acá no vas a encontrar una versión ya resuelta de nada —
               muestro el proceso mientras pasa, con los miedos y los errores
               incluidos.
@@ -50,19 +50,19 @@ export function Historia() {
                 className="border-l-2 pl-6"
                 style={{
                   borderColor: etapa.actual
-                    ? "var(--color-accent)"
-                    : "var(--color-surface)",
+                    ? "var(--color-brand)"
+                    : "var(--color-border)",
                 }}
               >
-                <h3 className="mb-1 flex items-center gap-3 font-semibold text-[var(--color-text)]">
+                <h3 className="mb-1 flex items-center gap-3 font-semibold text-content">
                   {etapa.titulo}
                   {etapa.actual && (
-                    <span className="rounded border border-[var(--color-accent)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-[var(--color-accent)]">
+                    <span className="rounded-full border border-brand px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-widest text-brand">
                       ahora
                     </span>
                   )}
                 </h3>
-                <p className="text-[var(--color-muted)]">{etapa.detalle}</p>
+                <p className="text-content-secondary">{etapa.detalle}</p>
               </div>
             ))}
           </div>
