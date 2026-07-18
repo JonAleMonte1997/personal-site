@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -21,9 +22,18 @@ export function Proyectos() {
             className="block rounded-xl bg-surface p-4 transition-colors hover:bg-surface-selected"
           >
             <div className="mb-2 flex items-center justify-between gap-4">
-              <h3 className="font-semibold text-content">
-                {libreFit.nombre}
-              </h3>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/librefit-logo.png"
+                  alt=""
+                  width={36}
+                  height={36}
+                  className="h-9 w-9"
+                />
+                <h3 className="font-semibold text-content">
+                  {libreFit.nombre}
+                </h3>
+              </div>
               <span className="font-mono text-xs text-brand">
                 seguimiento →
               </span>

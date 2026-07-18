@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -18,9 +19,19 @@ export default function LibreFitPage() {
           <p className="mb-3 font-mono text-sm text-brand">
             Proyecto
           </p>
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-content sm:text-5xl">
-            {libreFit.nombre}
-          </h1>
+          <div className="mb-4 flex items-center gap-4">
+            <Image
+              src="/images/librefit-logo.png"
+              alt=""
+              width={72}
+              height={72}
+              priority
+              className="h-14 w-14 sm:h-[72px] sm:w-[72px]"
+            />
+            <h1 className="text-4xl font-bold tracking-tight text-content sm:text-5xl">
+              {libreFit.nombre}
+            </h1>
+          </div>
           <p className="mb-6 max-w-xl text-lg text-content-secondary">
             {libreFit.resumen}
           </p>
