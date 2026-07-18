@@ -15,9 +15,7 @@ export const site = {
     // Handle heredado de la etapa anterior; si la marca cambia de handle,
     // actualizar solo acá.
     instagram: "https://www.instagram.com/jmontenegro.dev",
-    // Canal de YouTube todavía sin crear — completar cuando exista y la
-    // sección "Seguime" lo va a mostrar automáticamente.
-    youtube: null as string | null,
+    youtube: "https://www.youtube.com/@jmontenegro.dev.1997" as string | null,
     github: "https://github.com/JonAleMonte1997",
     email: "jona.ch.dev@gmail.com",
   },

@@ -21,7 +21,7 @@ El contexto de la marca (historia, voz, pilares) vive en `~/Desktop/personal-bra
 - `src/app/` — rutas: home (`page.tsx`), `/libre-fit` (seguimiento) y `/libre-fit/privacidad`, más SEO (`sitemap.ts`, `robots.ts`, `opengraph-image.tsx`).
 - `src/components/sections/` — secciones de la home; `layout/` header y footer; `ui/` primitivas reutilizables.
 - `src/data/` — todo el contenido editable vive acá, no en los componentes:
-  - `site.ts` — única fuente de verdad de URL, metadata y links públicos (Instagram, YouTube, email). El canal de YouTube está en `null` hasta que exista; al completarlo, la sección "Seguime" lo muestra sola.
+  - `site.ts` — única fuente de verdad de URL, metadata y links públicos (Instagram, YouTube, email).
   - `libre-fit.ts` — estado público de LibreFit (hecho / en camino / bitácora). Actualizar este archivo cuando avance el proyecto.
 
 ## Convenciones

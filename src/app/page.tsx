@@ -16,7 +16,11 @@ const personLd = {
   name: site.name,
   description: site.description,
   url: site.url,
-  sameAs: [site.profiles.instagram, site.profiles.github],
+  sameAs: [
+    site.profiles.instagram,
+    site.profiles.youtube,
+    site.profiles.github,
+  ].filter(Boolean),
 };
 
 export default function Home() {
