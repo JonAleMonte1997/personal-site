@@ -1,17 +1,30 @@
 @import "tailwindcss";
 
+/* Tokens espejados del design system de LibreFit
+   (~/Desktop/libre-fit/docs/design-system.md + src/global.css).
+   Semánticos primero: los componentes usan bg-surface / text-content /
+   bg-brand, nunca valores crudos. Dark-only. */
 @theme inline {
-  --color-bg: #0d1117;
-  --color-surface: #161b22;
-  --color-text: #e6edf3;
-  --color-muted: #8b949e;
-  --color-accent: #06b6d4;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  /* Spacing rhythm tokens (FR-018) — encode the section/block scale */
-  --space-section: 6rem; /* vertical section padding (py-24) */
-  --space-block: 3rem; /* intra-section block rhythm (space-y-12) */
-  --measure: 48rem; /* max reading width (max-w-3xl), constrains ultra-wide */
+  /* Marca — verde energético (salud / progreso) */
+  --color-brand: #22c55e;
+  --color-brand-pressed: #16a34a;
+  --color-on-brand: #052e16;
+
+  /* Fondos */
+  --color-bg: #000000;
+  --color-surface: #1c1c1e;
+  --color-surface-selected: #2c2c2e;
+
+  /* Texto */
+  --color-content: #f9fafb;
+  --color-content-secondary: #9ca3af;
+
+  /* Líneas */
+  --color-border: #2c2c2e;
+
+  --font-sans: var(--font-spline-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 :root {
@@ -25,14 +38,14 @@ html {
 
 body {
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-content);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Consistent keyboard focus feedback across all interactive elements
-   (FR-020, FR-024). Reuses the single accent token — no new colors. */
+/* Feedback de foco de teclado consistente en todo elemento interactivo.
+   Reusa el único token de marca — sin colores nuevos. */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-brand);
   outline-offset: 2px;
   border-radius: 2px;
 }
