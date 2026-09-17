@@ -1,8 +1,8 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/data/site";
 
-// Preview social 1200×630 con la marca, generado en build (sin runtime).
-// Tema oscuro + acento cian, consistente con el design system del sitio.
+// Preview social 1200×630, generado en build (sin runtime). Tema oscuro y
+// acento verde, espejo del design system de LibreFit igual que el sitio.
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = site.title;
@@ -44,16 +44,13 @@ export default function OpengraphImage() {
         </div>
         <div
           style={{
-            fontSize: 40,
+            fontSize: 44,
             color: "#9ca3af",
             marginTop: 24,
             maxWidth: 980,
           }}
         >
           {site.tagline}
-        </div>
-        <div style={{ fontSize: 30, color: "#9ca3af", marginTop: 20 }}>
-          Chivilcoy → Bariloche · agosto 2026
         </div>
         <div
           style={{
